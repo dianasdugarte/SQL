@@ -1,0 +1,35 @@
+--Create a store database
+
+CREATE TABLE Switch_Games (id INTEGER PRIMARY KEY, name TEXT, amount INTEGER, rating INTEGER, difficulty INTEGER, price INTEGER);
+
+INSERT INTO Switch_Games VALUES
+(1, "Mario Kart", 100, 5/5, 3/5, 50),
+(2, "Unravel", 80, 5/5, 2/5, 20), 
+(3, "Unravel 2", 80, 5/5, 3/5, 22), 
+(4, "It Takes Two", 50, 4/5, 3/5, 18),
+(5, "Super Mario Party", 45, 3/5, 1/5, 10),
+(6, "Super Mario Bros", 85, 1/5, 1/5, 75), 
+(7, "Fall Guys", 100, 4/5, 5/5, 35), 
+(8, "Overcooked", 55, 5/5, 5/5, 15), 
+(9, "Fortnite", 10, 3/5, 5/5, 40), 
+(10, "Luigi's Mansion", 30, 4/5, 3/5, 30), 
+(11, "Super Mario Sunshine", 60, 5/5, 3/5, 100), 
+(12, "Animal Crossing", 5, 1/5, 1/5, 5),
+(13, "FIFA", 10, 1/5, 5/5, 85),
+(14, "Tetris", 110, 5/5, 4/5, 45), 
+(15, "Ori", 100, 5/5, 3/5, 33);
+
+--Display the database
+SELECT * FROM Switch_Games;
+
+--Display the database ordered by price
+SELECT * FROM Switch_Games ORDER BY price;
+
+--What is the most expensive game in the store?
+SELECT MAX(price) FROM Switch_Games;
+
+--If a person wants to buy one of each game, what would be the cost?
+SELECT SUM(price) FROM Switch_Games;
+
+--If a person has 40 dollars to spend, what games would they be able to buy?
+SELECT * FROM Switch_Games WHERE price < 40 ORDER BY PRICE;
