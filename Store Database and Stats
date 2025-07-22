@@ -20,16 +20,24 @@ INSERT INTO Switch_Games VALUES
 (15, "Ori", 100, 5/5, 3/5, 33);
 
 --Display the database
-SELECT * FROM Switch_Games;
+SELECT * 
+FROM Switch_Games;
 
 --Display the database ordered by price
-SELECT * FROM Switch_Games ORDER BY price;
+SELECT * 
+FROM Switch_Games 
+ORDER BY price;
 
 --What is the most expensive game in the store?
-SELECT MAX(price) FROM Switch_Games;
+SELECT MAX(price) 
+FROM Switch_Games;
 
 --If a person wants to buy one of each game, what would be the cost?
-SELECT SUM(price) FROM Switch_Games;
+SELECT SUM(price) 
+FROM Switch_Games;
 
 --If a person has 40 dollars to spend, what games would they be able to buy?
-SELECT * FROM Switch_Games WHERE price < 40 ORDER BY PRICE;
+SELECT * 
+FROM Switch_Games 
+WHERE price < 40 
+ORDER BY PRICE;
